@@ -4,14 +4,17 @@ public class ShortestPath {
     static final int V = 6; // Only 6 vertices: A-F
 
     int minDistance(int dist[], Boolean sptSet[]) {
-        int min = Integer.MAX_VALUE, min_index = -1;
+        int min = Integer.MAX_VALUE;
+        		
+        		int min_index = -1;
 
         for (int v = 0; v < V; v++)
+        {
             if (!sptSet[v] && dist[v] <= min) {
                 min = dist[v];
                 min_index = v;
             }
-
+        }
         return min_index;
     }
 
@@ -22,7 +25,8 @@ public class ShortestPath {
             System.out.println(names[i] + " \t\t\t " + dist[i]);
     }
 
-    void dijkstra(int graph[][], int src) {
+    void dijkstra(int graph[][], int src) 
+       {
         int dist[] = new int[V];
         Boolean sptSet[] = new Boolean[V];
 

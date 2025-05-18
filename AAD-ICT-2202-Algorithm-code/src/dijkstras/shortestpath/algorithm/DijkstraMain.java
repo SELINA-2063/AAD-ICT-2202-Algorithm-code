@@ -4,7 +4,9 @@ public class DijkstraMain {
 
     public static void main(String[] args) {
         
-        int graph [][]  = new int[][] {
+        int graph [][]  = new int[][] 
+        		
+        {
             // A  B  C  D  E  F
             { 0, 4, 5, 0, 0, 0 }, // A
             { 4, 0,11, 9, 7, 0 }, // B
